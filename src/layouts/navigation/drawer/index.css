@@ -1,0 +1,119 @@
+
+
+.logo-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 100;
+  fill: #1E1E1E;
+}
+
+#logo-path {
+  transition: .5s;
+}
+
+
+.nav-container {
+  position: fixed;
+  top: 15px;
+  right: 5%;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 100;
+}
+.change{
+    position: fixed;
+      top: 15px;
+      right: 3%;
+      display: inline-block;
+      cursor: pointer;
+      z-index: 100;
+}
+
+.bar1 {
+  width: 25px;
+  height: 5px;
+  background-color: #05055e;
+  margin: 6px 0;
+  transition: 0.2s;
+  z-index: 100;
+}
+
+.change .bar1 {
+  width: 50%;
+  background-color: #05055e;
+  transform: rotate(45deg) translate(5px, 1px);
+  z-index: 100;
+}
+
+.bar2 {
+  width: 35px;
+  height: 5px;
+  background-color: #05055e;
+  margin: 6px 0;
+  transition: 0.7s;
+  z-index: 100;
+}
+
+.change .bar2 {
+  background-color: #05055e;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 100;
+}
+
+.bar3 {
+  width: 15px;
+  height: 5px;
+  background-color: #05055e;
+  margin: 6px 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.change .bar3 {
+  width: 50%;
+  background-color: #05055e;
+  transform: rotate(45deg) translate(7.5px, -14px);
+  z-index: 100;
+}
+
+
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-color: #171717;
+  overflow-x: hidden;
+  transition: 1s;
+  font-family: 'Lato', sans-serif;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  top: 20%;
+}
+
+
+/* .overlay-bar {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  z-index: 2555;
+  transform: rotate(-45deg) translate(0, -3000px);
+  background-color: #1B1B1B;
+  opacity: 100%;
+  transition: 1.5s;
+  z-index: 0;
+  overflow: hidden;
+} */
+
