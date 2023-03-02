@@ -25,7 +25,7 @@ export const ROUTES = [
         component: <Share />,
       },
       {
-        path: "/CardComponent",
+        path: "/component",
         key: "CardComponent",
         component: <CardComponent />,
       },

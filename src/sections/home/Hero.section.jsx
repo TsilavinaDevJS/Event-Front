@@ -29,8 +29,7 @@ export default function HeroSection() {
             sx={{
               color: "#05055e",
               fontWeight: "532",
-              width: { xs: "100%", md: "60%" },
-              marginBottom: "8px",
+              width: { xs: "100%", md: "460px" },
               textAlign: { xs: "center", md: "start" },
               fontSize: { xs: "2.4rem", md: "3rem" },
               height: { xs: "auto", md: "100px" },
@@ -59,11 +58,10 @@ export default function HeroSection() {
           </Typography>
           <Box
             sx={{
-              display: "grid",
               justifyContent: { xs: "center", md: "start" },
               marginBottom: { xs: "22px", md: "0" },
               height: "35px",
-              marginTop: { xs: "-50px", md: "0" },
+              display: "inline",
             }}>
             <Button
               onClick={() => navigate("/CardComponent")}
@@ -77,8 +75,15 @@ export default function HeroSection() {
             </Button>
           </Box>
         </Grid>
-        <Grid xs={5} sx={{ display: { xs: "none", md: "block" } }}>
-          <Box component={"img"} src={Agence} alt="" />
+        <Grid
+          xs={5}
+          sx={{ display: { xs: "none", md: "block" }, height: "400px" }}>
+          <Box
+            component={"img"}
+            sx={{ width: "40vw", height: "auto" }}
+            src={Agence}
+            alt=""
+          />
         </Grid>
       </Grid>
     </>

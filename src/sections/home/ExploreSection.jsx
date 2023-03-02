@@ -18,7 +18,15 @@ export default function ExploreSection() {
         </Typography>
         <Box sx={{ marginTop: "22px" }}>
           <Grid container justifyContent={"center"}>
-            <Grid xs={12} sm={6} md={3} sx={{ marginBottom: "20px" }}>
+            <Grid
+              xs={12}
+              sm={6}
+              md={3}
+              sx={{
+                marginBottom: "20px",
+                display: "grid",
+                justifyContent: "center",
+              }}>
               <Card
                 sx={{
                   width: 200,
@@ -43,7 +51,15 @@ export default function ExploreSection() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid xs={12} sm={6} md={3} sx={{ marginBottom: "20px" }}>
+            <Grid
+              xs={12}
+              sm={6}
+              md={3}
+              sx={{
+                marginBottom: "20px",
+                display: "grid",
+                justifyContent: "center",
+              }}>
               <Card
                 sx={{
                   width: 200,
@@ -68,7 +84,15 @@ export default function ExploreSection() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid xs={12} sm={6} md={3} sx={{ marginBottom: "20px" }}>
+            <Grid
+              xs={12}
+              sm={6}
+              md={3}
+              sx={{
+                marginBottom: "20px",
+                display: "grid",
+                justifyContent: "center",
+              }}>
               <Card
                 sx={{
                   width: 200,

@@ -1,26 +1,31 @@
-import { Box } from "@mui/material";
-// import { theme } from "./config/theme";
+import { Box, ThemeProvider } from "@mui/material";
 import { RenderRoutes, ROUTES } from "./config/routes";
 import "./App.css";
-// import { useDispatch } from "react-redux";
-// import { useContext, useEffect } from "react";
-// import { getUser } from "./action/user.actions";
-// import { UidContext } from "./config/AppContext";
+import React from "react";
+import { UidContext } from "./config/AppContext";
+import axios from "axios";
+import { theme } from "./config/theme";
 
 function App() {
-  // const dispatch = useDispatch();
+  const [uid, setUid] = React.useState(null);
+  React.useEffect(() => {
+    let value = window.localStorage.uid;
+    if (value) {
+      axios
+        .get(`${process.env.REACT_APP_API_URL}/api/getUserConnect/${value}`)
+        .then((res) => {
+          setUid(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [uid]);
 
-  // useEffect(() => {
-  //   if (uid) dispatch(getUser(uid));
-  // }, [uid]);
   return (
-    // <UidContext.Provider value={uid}>
-    // <ThemeProvider theme={theme}>
-    <Box>
-      <RenderRoutes routes={ROUTES} />
-    </Box>
-    // </ThemeProvider>
-    // </UidContext.Provider>
+    <UidContext.Provider value={uid}>
+      <ThemeProvider theme={theme}>
+        <RenderRoutes routes={ROUTES} />
+      </ThemeProvider>
+    </UidContext.Provider>
   );
 }
 
